@@ -7,15 +7,13 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {HttpClientModule } from '@angular/common/http';
-import { CategoriaService } from '../services/domain/categoria.service';
 
 @NgModule({
   declarations: [
     MyApp
   ],
   imports: [
-    BrowserModule, HttpClientModule,
+    BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -25,8 +23,7 @@ import { CategoriaService } from '../services/domain/categoria.service';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CategoriaService
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
